@@ -6,9 +6,10 @@ addButton.addEventListener("click", function () {
 
   let taskItem = document.createElement("div");
 
-  let newItem = document.createElement("p");
+  let newItem = document.createElement("li");
   newItem.textContent = inputTask;
   document.body.appendChild(newItem);
+  taskList.appendChild(newItem);
 
   // Create a delete button
   let deleteButton = document.createElement("button");
