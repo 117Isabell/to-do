@@ -1,0 +1,90 @@
+/* Use media queries to target different screen sizes */
+@media (max-width: 600px) {
+  /* Adjust the style for small screens */
+  h1 {
+    font-size: 2rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  input[type="text"] {
+    width: 70%;
+  }
+
+  input[type="button"] {
+    width: 20%;
+  }
+}
+
+@media (min-width: 601px) {
+  /* Adjust the style for large screens */
+  h1 {
+    font-size: 3rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+    justify-content: center;
+  }
+
+  li {
+    width: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  input[type="text"] {
+    width: 80%;
+  }
+
+  input[type="button"] {
+    width: 10%;
+  }
+}
+
+/* Use relative units and variables for colors and fonts */
+:root {
+  --primary-color: blue;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  font-family: var(--font-family);
+}
+
+input[type="button"] {
+  background-color: var(--primary-color);
+  color: white;
+  height: 50px;
+}
+
+input[type="text"] {
+  background-color: var(--background-color);
+  height: 50px;
+}
